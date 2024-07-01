@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  clientJDR-database:
+    image: postgres:latest
+    container_name: clientJDR-Database
+    environment:
+      POSTGRES_USER: clientJDR
+      POSTGRES_PASSWORD: clientjdr
+      POSTGRES_DB: clientJDRDocker
+    ports:
+      - "5432:5432"
+    volumes:
+      - database-clientJDR:/var/lib/postgresql/data
+
+volumes:
+  database-clientJDR:
