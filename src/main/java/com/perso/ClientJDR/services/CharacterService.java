@@ -3,7 +3,6 @@ package com.perso.ClientJDR.services;
 import com.perso.ClientJDR.entities.Character;
 import com.perso.ClientJDR.repositories.CharacterRepository;
 import lombok.RequiredArgsConstructor;
-import org.checkerframework.checker.units.qual.C;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
