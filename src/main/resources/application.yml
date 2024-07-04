@@ -1,0 +1,11 @@
+server:
+  port: ${CLIENTJDR_PORT:8080}
+  cors:
+    allowedOrigin: ${CORS_CONFIG_ALLOWED_ORIGIN:*}
+
+spring:
+  datasource:
+    url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/${DB_NAME:clientJDRDocker}
+    username: ${DB_USER:clientJDR}
+    password: ${DB_PASSWORD:clientjdr}
+    driver-class-name: org.postgresql.Driver

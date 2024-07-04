@@ -4,11 +4,10 @@ import com.perso.ClientJDR.entities.Character;
 import com.perso.ClientJDR.services.CharacterService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.UUID;
 
 @RestController
 @RequiredArgsConstructor
@@ -21,5 +20,21 @@ public class CharacterController {
     @GetMapping
     public List<Character> findAll(){
         return characterService.findAll();
+    }
+
+    @PostMapping
+    public Character create(Character newCharacter) {
+        newCharacter.setId(null);
+        return characterService.save(newCharacter); }
+
+    @PutMapping
+    public Character update(String id,Character updateCharacter) {
+        updateCharacter.setId(UUID.fromString(id));
+        return characterService.save(updateCharacter);
+    }
+
+    @DeleteMapping
+    public void delete(String id){
+        characterService.delete(UUID.fromString(id));
     }
 }

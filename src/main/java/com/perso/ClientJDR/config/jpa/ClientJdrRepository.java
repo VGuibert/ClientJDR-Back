@@ -1,12 +1,14 @@
 package com.perso.ClientJDR.config.jpa;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+import org.springframework.data.repository.NoRepositoryBean;
 
 import java.io.Serializable;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
 
-
+@NoRepositoryBean
 public interface ClientJdrRepository <T, S extends Serializable> extends JpaRepository<T, S>{
 
     /**

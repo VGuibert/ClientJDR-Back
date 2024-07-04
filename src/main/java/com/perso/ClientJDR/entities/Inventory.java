@@ -9,12 +9,11 @@ import java.util.UUID;
 
 @Data
 @Entity
-public class Character {
+public class Inventory {
 
     @Id
     @GeneratedValue
     private UUID id;
-    private int level;
-    private String name;
+
 
 }
