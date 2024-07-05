@@ -7,20 +7,16 @@ import lombok.Data;
 
 import java.util.UUID;
 
-@Data
 @Entity
-public class Character {
+@Data
+public class Job {
 
     @Id
     @GeneratedValue
     private UUID id;
-    private int level;
     private String name;
-    private int armorClass;
-    private Job job;
-    private int currentHealth;
-    private int maxHealth;
-    private int tmpHealth;
-    private String notes;
+    private int nbSkillChoice;
+    private int startingHealthBase;
+    private String healthPerLevel;
 
 }

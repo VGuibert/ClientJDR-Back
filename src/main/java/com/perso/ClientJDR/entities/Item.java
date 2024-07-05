@@ -15,6 +15,10 @@ public class Item {
     @GeneratedValue
     private UUID id;
     private String name;
-    private String desc;
+    private Boolean keyItem;
+    private int weight;
+    private int quantity;
+    private String damage;
+    private String description;
 
 }

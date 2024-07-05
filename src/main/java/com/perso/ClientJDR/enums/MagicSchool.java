@@ -1,0 +1,5 @@
+package com.perso.ClientJDR.enums;
+
+public enum MagicSchool {
+    ABJURATION, DIVINATION, EVOCATION, ENCHANTING, ILLUSION, CONJURING, NECROMANCY, TRANSMUTATION
+}

@@ -9,11 +9,10 @@ import java.util.UUID;
 
 @Data
 @Entity
-public class Inventory {
+public class Background {
 
     @Id
     @GeneratedValue
     private UUID id;
-
-
+    private int bonusLanguageStat;
 }

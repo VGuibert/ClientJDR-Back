@@ -1,5 +1,6 @@
 package com.perso.ClientJDR.entities;
 
+import com.perso.ClientJDR.enums.MagicSchool;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
@@ -9,18 +10,14 @@ import java.util.UUID;
 
 @Data
 @Entity
-public class Character {
+public class Spell {
 
     @Id
     @GeneratedValue
     private UUID id;
-    private int level;
     private String name;
-    private int armorClass;
-    private Job job;
-    private int currentHealth;
-    private int maxHealth;
-    private int tmpHealth;
-    private String notes;
+    private String description;
+    private int spellLevel;
+    private MagicSchool magicSchool;
 
 }
