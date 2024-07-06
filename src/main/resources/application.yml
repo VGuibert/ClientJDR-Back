@@ -9,3 +9,15 @@ spring:
     username: ${DB_USER:clientJDR}
     password: ${DB_PASSWORD:clientjdr}
     driver-class-name: org.postgresql.Driver
+  jpa:
+     generate-ddl: true
+     properties:
+       hibernate:
+         ddl-auto: create
+         dialect: org.hibernate.dialect.PostgreSQLDialect
+     sql:
+       init:
+         mode: always
+     liquibase:
+       enabled: false
+
