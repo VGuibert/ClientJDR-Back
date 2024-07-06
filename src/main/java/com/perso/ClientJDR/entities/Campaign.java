@@ -16,5 +16,5 @@ public class Campaign {
     private UUID id;
     private String title;
     private String resume;
-    private int currentChapter;
+    private Integer currentChapter;
 }

@@ -16,5 +16,5 @@ public class Feature {
     private UUID id;
     private String name;
     private String description;
-    private int requiredLevel;
+    private Integer requiredLevel;
 }

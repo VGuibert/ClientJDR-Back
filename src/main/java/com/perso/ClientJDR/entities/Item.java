@@ -1,8 +1,7 @@
 package com.perso.ClientJDR.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import com.perso.ClientJDR.enums.ItemCategory;
+import jakarta.persistence.*;
 import lombok.Data;
 
 import java.util.UUID;
@@ -16,8 +15,10 @@ public class Item {
     private UUID id;
     private String name;
     private Boolean keyItem;
-    private int weight;
-    private int quantity;
+    private Integer weight;
+    @Enumerated(EnumType.STRING)
+    private ItemCategory itemCategory;
+    private Integer quantity;
     private String damage;
     private String description;
 

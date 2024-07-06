@@ -1,9 +1,7 @@
 package com.perso.ClientJDR.entities;
 
 import com.perso.ClientJDR.enums.MagicSchool;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Data;
 
 import java.util.UUID;
@@ -17,7 +15,8 @@ public class Spell {
     private UUID id;
     private String name;
     private String description;
-    private int spellLevel;
+    private Integer spellLevel;
+    @Enumerated(EnumType.STRING)
     private MagicSchool magicSchool;
 
 }

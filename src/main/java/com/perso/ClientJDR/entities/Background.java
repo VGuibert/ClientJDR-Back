@@ -1,10 +1,11 @@
 package com.perso.ClientJDR.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import com.perso.ClientJDR.enums.Proficiency;
+import com.perso.ClientJDR.enums.Skill;
+import jakarta.persistence.*;
 import lombok.Data;
 
+import java.util.List;
 import java.util.UUID;
 
 @Data
@@ -14,5 +15,9 @@ public class Background {
     @Id
     @GeneratedValue
     private UUID id;
-    private int bonusLanguageStat;
+    @Enumerated(EnumType.STRING)
+    private List<Skill> masteredSkill;
+    @Enumerated(EnumType.STRING)
+    private List<Proficiency> startingProficiencies;
+    private Integer bonusLanguageStat;
 }
