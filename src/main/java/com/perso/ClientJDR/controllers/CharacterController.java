@@ -33,6 +33,12 @@ public class CharacterController {
         return characterService.save(updateCharacter);
     }
 
+//    @PatchMapping
+//    public Character partialUpdate(Character partialCharacterUpdate,String id) {
+//        partialCharacterUpdate.setId(UUID.fromString(id));
+//        return characterService.save(partialCharacterUpdate);
+//    }
+
     @DeleteMapping
     public void delete(String id){
         characterService.delete(UUID.fromString(id));
