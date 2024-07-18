@@ -9,11 +9,10 @@ import java.util.UUID;
 
 @Data
 @Entity
-public class Player {
-
+public class JobMasteryBonus {
     @Id
     @GeneratedValue
     private UUID id;
-    private String pseudo;
-
+    private Integer level;
+    private Integer bonus;
 }

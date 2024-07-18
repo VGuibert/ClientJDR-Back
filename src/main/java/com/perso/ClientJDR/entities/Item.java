@@ -1,6 +1,5 @@
 package com.perso.ClientJDR.entities;
 
-import com.perso.ClientJDR.enums.ItemCategory;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -16,10 +15,12 @@ public class Item {
     private String name;
     private Boolean keyItem;
     private Integer weight;
-    @Enumerated(EnumType.STRING)
+    @ManyToOne
     private ItemCategory itemCategory;
     private Integer quantity;
     private String damage;
+    private Integer armorClass;
     private String description;
+    private String notes;
 
 }

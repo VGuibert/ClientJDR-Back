@@ -1,6 +1,5 @@
 package com.perso.ClientJDR.services;
 
-import com.perso.ClientJDR.entities.Npc;
 import com.perso.ClientJDR.repositories.NpcRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

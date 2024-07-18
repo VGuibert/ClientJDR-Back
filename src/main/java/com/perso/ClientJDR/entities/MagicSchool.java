@@ -1,23 +1,17 @@
 package com.perso.ClientJDR.entities;
 
-
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
 import lombok.Data;
 
-import java.util.List;
 import java.util.UUID;
-
-import static jakarta.persistence.EnumType.STRING;
 
 @Data
 @Entity
-public class Race {
-
+public class MagicSchool {
     @Id
     @GeneratedValue
     private UUID id;
     private String name;
-    @ManyToMany
-    private Trait trait;
-
 }

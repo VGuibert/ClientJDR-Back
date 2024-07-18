@@ -1,5 +1,6 @@
 package com.perso.ClientJDR.entities;
 
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
@@ -9,11 +10,9 @@ import java.util.UUID;
 
 @Data
 @Entity
-public class Player {
-
+public class Characteristic {
     @Id
     @GeneratedValue
     private UUID id;
-    private String pseudo;
-
+    private String nameOfCharacteristic;
 }

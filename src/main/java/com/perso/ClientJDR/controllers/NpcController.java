@@ -1,7 +1,6 @@
 package com.perso.ClientJDR.controllers;
 
 
-import com.perso.ClientJDR.entities.Npc;
 import com.perso.ClientJDR.services.NpcService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

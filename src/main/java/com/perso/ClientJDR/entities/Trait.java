@@ -1,21 +1,19 @@
 package com.perso.ClientJDR.entities;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
 import lombok.Data;
 
 import java.util.UUID;
 
-@Data
 @Entity
-public class Spell {
+@Data
+public class Trait {
 
-    @Id
     @GeneratedValue
+    @Id
     private UUID id;
     private String name;
     private String description;
-    private Integer spellLevel;
-    @ManyToOne
-    private MagicSchool magicSchool;
-
 }

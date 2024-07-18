@@ -9,11 +9,10 @@ import java.util.UUID;
 
 @Data
 @Entity
-public class Player {
+public class ItemCategory {
 
-    @Id
     @GeneratedValue
+    @Id
     private UUID id;
-    private String pseudo;
-
+    private String nameOfCategory;
 }
