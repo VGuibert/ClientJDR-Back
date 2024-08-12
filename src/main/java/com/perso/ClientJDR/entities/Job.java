@@ -16,8 +16,6 @@ public class Job {
     private String name;
     private String healthPerLevel;
     private Integer level;
-    @ManyToMany
-    private Characteristic characteristic;
     @ManyToOne
     private JobMasteryBonus jobMasteryBonus;
 }

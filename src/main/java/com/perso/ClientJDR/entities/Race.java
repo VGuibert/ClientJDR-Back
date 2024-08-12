@@ -17,7 +17,7 @@ public class Race {
     @GeneratedValue
     private UUID id;
     private String name;
-    @ManyToMany
+    @ManyToOne
     private Trait trait;
 
 }
