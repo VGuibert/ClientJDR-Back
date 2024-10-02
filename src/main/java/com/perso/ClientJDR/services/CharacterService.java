@@ -5,7 +5,9 @@ import com.perso.ClientJDR.repositories.CharacterRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import javax.swing.text.html.Option;
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 @Service
@@ -16,6 +18,10 @@ public class CharacterService {
 
     public List<Character> findAll (){
         return characterRepository.findAll();
+    }
+
+    public Character findById (final UUID id){
+        return characterRepository.findById(id).orElseThrow();
     }
 
     public Character save (Character newCharacter) { return  characterRepository.save(newCharacter);}

@@ -35,7 +35,7 @@ public class JobController {
         return jobService.save(updateJob);
     }
 
-    @PatchMapping("{/id}")
+    @PatchMapping("/{id}")
     public Job updatePartially(@PathVariable UUID id,@RequestBody Job updatePartillyJob){
         Job jobToUpdate = jobService.findById(id);
         mapperService.patcherMapSecured(jobToUpdate,updatePartillyJob);

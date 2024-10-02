@@ -22,6 +22,13 @@ public class CharacterController {
         return characterService.findAll();
     }
 
+
+    @GetMapping("/{id}")
+    public Character findById(@PathVariable UUID id){
+        return characterService.findById(id);
+    }
+
+
     @PostMapping
     public Character create(Character newCharacter) {
         newCharacter.setId(null);

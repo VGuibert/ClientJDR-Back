@@ -15,7 +15,6 @@ public class Job {
     private UUID id;
     private String name;
     private String healthPerLevel;
-    private Integer level;
     @ManyToOne
     private JobMasteryBonus jobMasteryBonus;
 }

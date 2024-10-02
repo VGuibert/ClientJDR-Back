@@ -1,7 +1,7 @@
 server:
   port: ${CLIENTJDR_PORT:8080}
   cors:
-    allowedOrigin: ${CORS_CONFIG_ALLOWED_ORIGIN:*}
+    allowedOrigin: ${http://localhost:5173/:*}
 
 spring:
   datasource:
