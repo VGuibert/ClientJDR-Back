@@ -1,6 +1,4 @@
 package com.perso.ClientJDR.controllers;
-
-import com.perso.ClientJDR.entities.Character;
 import com.perso.ClientJDR.services.PlayerCharacterService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -20,12 +18,16 @@ public class PlayerCharacter {
     private final PlayerCharacterService playerCharacterService;
 
     @GetMapping
-    public List<Character> findall(){
+    public List<PlayerCharacter> findall(){
         return playerCharacterService.findall();
     }
 
+    @GetMapping
+
+    public
+
     @PostMapping
-    public  Character save(Character newCharacter) {
-        newCharacter.setId(null);
-        return playerCharacterService.save(newCharacter);}
+    public  PlayerCharacter save(PlayerCharacter newPlayerCharacter) {
+        newPlayerCharacter.setId(null);
+        return playerCharacterService.save(newPlayerCharacter);}
 }
